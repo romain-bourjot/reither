@@ -36,7 +36,11 @@
 		"build:flow": "cpy 'src/index.js.flow' 'dist'",
 		"build": "rimraf ./dist && npm run build:transpile && npm run build:compile && rimraf ./dist/temp && npm run build:flow",
 		"test:mutation": "stryker run",
-		"coverage": "nyc mocha --require @babel/register src/__tests__"
+		"coverage": "nyc mocha --require @babel/register src/__tests__",
+		"prepublishOnly": "npm run build"
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"husky": {
 		"hooks": {
