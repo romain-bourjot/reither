@@ -1,0 +1,20 @@
+[ignore]
+.*/dist/.*
+.*/__tests__.*
+
+[libs]
+flow-typed
+
+[options]
+module.name_mapper='^reither/\(.*\)' -> '<PROJECT_ROOT>/src/\1'
+server.max_workers=1
+suppress_comment=\\(.\\|\n\\)*\\$ExpectError
+include_warnings=true
+
+[version]
+
+[strict]
+nonstrict-import
+unsafe-getters-setters
+untyped-import
+untyped-type-import

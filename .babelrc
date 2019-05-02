@@ -1,0 +1,11 @@
+{
+	"presets": [
+		["@babel/preset-env", {"targets": {"node": "8.10"}}]
+	],
+	"plugins": [
+		["module-resolver", {"alias": {"reither": "./src"}}],
+		["@babel/plugin-transform-runtime"],
+		["@babel/plugin-transform-flow-strip-types"],
+		["minify-mangle-names", {"topLevel": "true"}]
+	]
+}
